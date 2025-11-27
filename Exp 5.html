@@ -1,0 +1,58 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+  <div align="left">
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label><br><br>
+
+      <label for="contact">Contact:</label><br>
+      <input type="text" id="contact" name="contact"><br><br>
+
+      <label for="course">Course:</label><br>
+      <select id="course" name="course">
+        <option value="select">--Select--</option>
+        <option value="science">Science</option>
+        <option value="commerce">Commerce</option>
+        <option value="arts">Arts</option>
+      </select><br><br>
+
+      <label for="country">Country:</label><br>
+      <select id="country" name="country">
+        <option value="select">--Select--</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select><br><br>
+
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="40"></textarea><br><br>
+
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
+
+    <p>© 2023 Student Registration Portal</p>
+
+  </div>
+
+</body>
+</html>
