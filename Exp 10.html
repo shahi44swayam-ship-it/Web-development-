@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEase</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+    }
+
+    /* ---------------------- HEADER ---------------------- */
+    header {
+        background: #222;
+        color: white;
+        padding: 15px 25px;
+    }
+
+    /* Grid Layout: Logo | Nav | Actions */
+    .header-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* ---------------------- NAVIGATION ---------------------- */
+    nav ul {
+        list-style: none;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* ---------------------- ACTIONS ---------------------- */
+    .actions {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* ---------------------- RESPONSIVE ---------------------- */
+    @media (max-width: 800px) {
+        /* Allow nav to wrap into multiple rows */
+        nav ul {
+            grid-auto-flow: row;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .actions {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        nav ul {
+            grid-template-columns: repeat(2, auto);
+            gap: 15px;
+        }
+    }
+
+    /* ---------------------- HERO ---------------------- */
+    main {
+        padding: 40px 25px;
+    }
+
+    .hero-title {
+        font-size: clamp(28px, 6vw, 50px);
+        margin-bottom: 10px;
+    }
+
+    .hero-sub {
+        font-size: clamp(14px, 3vw, 20px);
+        color: #444;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-grid">
+        <!-- Left Logo -->
+        <div class="logo">
+            <h1 style="font-size:28px;">ShopEase</h1>
+        </div>
+
+        <!-- Center Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="actions">
+            <a href="#">Cart 🛒</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+    <h1 class="hero-title">Welcome to ShopEase!</h1>
+    <p class="hero-sub">
+        Your one-stop destination for all shopping needs.
+    </p>
+</main>
+
+</body>
+</html>

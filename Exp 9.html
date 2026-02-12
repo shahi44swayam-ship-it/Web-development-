@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Best Selling Items</title>
+  <style>
+    /* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #222; background: #f6f6f6; }
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 26px;
+}
+.hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+/* Products grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 420px;
+}
+
+/* Image area */
+.card-media {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+.card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Content */
+.card-content {
+  padding: 18px 20px 26px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 auto;
+}
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  line-height: 1.15;
+}
+.product-desc {
+  font-size: 13px;
+  color: #6b6b6b;
+  line-height: 1.45;
+}
+
+/* Price and button area aligned to bottom */
+.price {
+  margin-top: 6px;
+  font-weight: 700;
+  color: #0a8b35; /* green */
+  font-size: 16px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #008bff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  width: 120px;
+  margin-top: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .products { grid-template-columns: repeat(2, 1fr); }
+  .card { min-height: 420px; }
+}
+
+@media (max-width: 520px) {
+  .products { grid-template-columns: 1fr; gap: 16px; }
+  .card-media { height: 180px; padding: 14px; }
+  .product-title { font-size: 16px; }
+  .hero h1 { font-size: 26px; }
+}
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Best Selling Items</h1>
+    </header>
+
+    <section class="products" aria-label="Best selling products">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="https://m.media-amazon.com/images/I/71Ixk-aiC+L._AC_.jpg" alt="HP 255 G10 Laptop" />
+        </div>
+        <div class="card-content">
+          <h2 class="product-title">HP 255 G10 Laptop (16GB RAM, 512GB SSD, Ryzen 3)</h2>
+          <p class="product-desc">A fast and reliable laptop ideal for daily work, browsing, and multitasking.</p>
+          <p class="price">₹999</p>
+          <a class="btn" href="#">Buy Now</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="data:image/webp;base64,UklGRuoIAABXRUJQVlA4IN4IAADQNQCdASqVAOoAPp1EnUqlo6MnKhJroOATiWUA0XkvTbK7/PHdKsLacSsV/X+iR/1vKj9Wejf1t/Qz/WA/3gaUZ9cT2nQrv+oUx7q6l0eShEvjZ2DKhpYvfLo0tS4c2OVvihTdfnY40VnR7g5cdojIS3tOPFW7EhXnEGW3jyA98JsMP21CguOq0cQEvx78w/h8sUHJvZI9RTHAX5WEuvakTO3ih+FlQ1c+MNrER804pcu07Olfon+Q2O+uel4FOyL1hmXVUlRZnrwcRTuYGcclDmTf8nNlBfS9RU/PTazAq1YoDFOX2OSh8IUgiKaunWjgpv1xJHccO15l+yhE43VbQ0ub1W3LVf6SFjk1AVFU05e7grcHVLMWWg0kPeG5vg/8fnR+f2pOnxETE2wBnd76HFt5qnRNEWoIm+BfFac69GkJPpcGQH/eWdMhz0WXDHRzg/0b5qHMqIWVy1TLUwRxTpDhe38WvRJAea62ZLOkaB0R8Lx76m4jXO/85Z/4soWecMhYx67i9om9ytZXi6wCzeyhJEWAmdOiJCpgUypJC3NsEtjXVCvhAy4ih1V5rmwAKXu1hL3gAP76toAAACPjm6er4toJlKj9nrgBuYQ4xDsIelqDrt360/T7bkPa5euFG8H+hNQgW8W1jqqd5CiPfOxx3gNd/zHP7O0wfAee6PNquDTiFQT9sujJuqI5y6hOwBXFcStOTXmVZfcUxXOR7Yqn5X9RELgdVL20A3ke2IKBgPncdzLZFRovKOYKDB934ypy3CQoU/TgYTZzYnblpAbyzsCnbCPf5GSiRo6YMDear9HPiFStIl2xdg7BOKAgg5XTnCuD8SMtBH5OpeTdZ0fOQA/8qBu+7VUMKONiToPzbbxnmBC2y2NQAm2BfPH39PjzJcHhG+S6n0oJuuceNwSiV7r+eXeNGvdHvC7TjftTJ3i+cTdrcFS2GLreFItYQcKRrqHwOxmC0MwMyDDaxmWIieo/utq5arHHBC9siJHVXhLJUh2wpiP315Pwy3MSzPkSvp89M1KxKD3itOEPFpU/kJ4lNdVvAsn6lhorp7W2FG2N1/JLRgr4mT9zQyIzB9QNhNgcjNuhSqCeM0QFyRBgDEtzePIuh1GQWduAcGR9pfaBCzVS401x/QVYhR3x92fftVJGsCdf/jYZWjI7bFZhJj/9VJoj+WZ7hGsFlblXKJpMoZykaLyMDUrShK8LCtfsP7XzKx3QHFycujca5wbiRI4IguwwqmHABOEf1G3qtjVltxcSxTkPDCooaeKh5UTvZV664i1U9RPWp01+lk7v/4xtoAc62+isHLAOg6dEVz88NnrJV/3Vv0IlbTYwMHBHHdfdOfMnpA+rWJMgsC9qufrS0megPVyjh9Ilcb5sm04z4sQ2YlicNjLk2fitO/jOXjRfAO5g/TMbYDGB7AB87saxGerIgMu0CEVFMg2UlbnNOh5+Z+yZXUDqj3UO2VNezFm5/NzR+1nH4Se0AZznCRapRM2Spht5EGeOLes5/J8ggLMXmvtlm4AF3J509TrM9jsYnTc8O90n6AqQwPFmfo/esyHpsSib8iJp+122eRkKUKPfW1Vq23W1H58dcpVVEsrCnpYPSADhH67bsTCNWilPB1zC6GrjUJVw7RExWee+jBKqEVNLCuSekQrFNa3lDcv2IYCJCCKgadvcLb39emdPCLLcvwqveg9veHW6y9x7h9csOFlb65U8tp1lxw7BWmr7hIYVKLk7LYfryjJv0zyDKe4H9R5ULdDpQjkTF9YLxrMvtNxzuVovp+ANYCYuJDBUQNrJaH6hVkdbCryAv1bHo6YEXRJMz1Azmzht8PBsz6oIBtMeKBWd6oN7jQbRvemki45GkIBf0C/qtRogzXS7QUfNWMdcKt37LfIYWHzSiSsCfMYJBmvU6ptnJN4uLoqkrpR8ftAnM8PKtg37Qncy04svvRD7PB8ccQIEt2V8nwWC5ah8gPEOjYkCVe/o4eVqN2R3c41s0PDn6Jp8y6Ie0Yfmo5Mk/AiCC7dmNiThDKIXGjj99+X3NHlMfo99sX/NDPvgSiQYfDjutR4MXNAaO17Q8MVl0MdtZybNirnGJC1S8/kfo6PvMhMeQwpUw66befXKVzjOD4EhgfI6f8Yr98xkMkeJPRdRA0ib2UK+JcPJLZa56HYBBQO++lzM4cotgVoxpqsnIEISllcRazZNfEpqtTolmjJViZJjIOPgwJPC2i1MQ2k1i5nw3DYDpM3cxlwr38gLtZ170uUP0tevjhTpLuehMDFFeUNE7IUGM8tJMc1UkHN1gYKEUgzdnN2oFYTXLQDZ/TqdQVbv15vXf9TXRBSrsO1Bs7TyZl2XDcsh2usUKyIilTzh79KJ8MQNthg0JwOjRaHFVXE7wrjXPL8T6A7mbiJf5Zzss31sOk1pLxsAt4I7dyiJLmYT+iOSDIuLghst7SUzgMsmIw5KYypBstkxKkAnWgHF5WeTa3anTLuS9MMOTQydef/m+l4n+I9dMczMAkqooDg+9uAmzU5LvaK5sS3eYAeg3QUSVjSGu89DJv/qcuThWRYieYbLZYn9FHEez7+8Bc0RbwaGSDmStYRDOM19QDYuwPyoxCPfYRZ7Six1P6wenYNk98hE9UceG6jkczuyItAO5PuDjHZ2EQNUXn6xbS8MPxucc5tomAMcfkKAJor3VH6XB5CxwDPQPzC40I+xSMa1LXHyZZABk7eOm3wiKbYaOGypI6vQMC4xwYCiTQ8Jn80GQ31ez0V4rXGamME/4l/cIdJBfc5JGwFH9OqwmTxep2eIz+DPwb5EgKJrB2aC/kCqJ/KymMLU1jsFTuXWHDZC3cOrwmbkAAzsl17aw/C01q5xJm5Enqe43uHNgLTMAAPhBI0iwpYJ0PSe0FOt/5FA88jnPY2MDwXqVTmCP7Bdv4MtBMz09S/ih/H2U739Dbi8WgehwpReMg3i4yIi+LjN+k9g70iZaw76cWT1EGYDDiMTRyiND+wo6ic/DIHhVKHbIDonqs4AAAAAAA==" alt="Apple iPhone 15 (128GB) - Green" />
+        </div>
+        <div class="card-content">
+          <h2 class="product-title">Apple iPhone 15 (128GB) - Green</h2>
+          <p class="product-desc">Experience smooth performance, stunning photos, and an advanced A16 chip.</p>
+          <p class="price">₹1499</p>
+          <a class="btn" href="#">Buy Now</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="https://th.bing.com/th/id/OIP.FcCMsL_Ni8FT6F2qkIfxxwHaJd?w=154&h=196&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="LG 28 L Convection Microwave Oven" />
+        </div>
+        <div class="card-content">
+          <h2 class="product-title">LG 28 L Convection Microwave Oven</h2>
+          <p class="product-desc">Perfect for baking, grilling, and quick heating with a large 28L capacity.</p>
+          <p class="price">₹799</p>
+          <a class="btn" href="#">Buy Now</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="https://www.bing.com/th/id/OIP.HGNvq4r1hWg1RTYFA9rcTwHaGx?w=195&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="boAt Nirvana Zenith Pro (2025)" />
+        </div>
+        <div class="card-content">
+          <h2 class="product-title">boAt Nirvana Zenith Pro (2025)</h2>
+          <p class="product-desc">Premium wireless earbuds with clear sound and long-lasting battery life.</p>
+          <p class="price">₹1299</p>
+          <a class="btn" href="#">Buy Now</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
